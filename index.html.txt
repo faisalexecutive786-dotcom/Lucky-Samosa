@@ -1,0 +1,592 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lucky Samosa - Premium Frozen Food Products | Lahore</title>
+    <meta name="description" content="Lucky Samosa offers authentic Pakistani frozen food products including samosas, rolls, kababs, and patties. Quality uncooked items delivered fresh in Lahore.">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ff6347 100%);
+        }
+        
+        .food-card {
+            transition: all 0.3s ease;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+        
+        .food-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(255, 140, 0, 0.3);
+        }
+        
+        .whatsapp-btn {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        .order-btn {
+            background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%);
+            transition: all 0.3s ease;
+        }
+        
+        .order-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, rgba(255, 140, 0, 0.9) 0%, rgba(255, 99, 71, 0.9) 100%),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="50" cy="10" r="0.5" fill="%23ffffff" opacity="0.15"/><circle cx="20" cy="60" r="0.5" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+        }
+        
+        .section-divider {
+            background: linear-gradient(90deg, transparent 0%, #ff8c00 50%, transparent 100%);
+            height: 2px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        
+        .floating-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+        }
+        
+        .category-header {
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .category-header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%);
+            border-radius: 2px;
+        }
+        
+         {
+            body { 
+                background: white !important; 
+                font-size: 12px;
+            }
+            .gradient-bg, .hero-section {
+                background: #ff8c00 !important;
+                -webkit-print-color-adjust: exact;
+                color-adjust: exact;
+            }
+            .food-card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <header class="gradient-bg shadow-lg relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-10"></div>
+        <div class="container mx-auto px-6 py-4 relative z-10">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center space-x-4">
+                    <div class="bg-white p-3 rounded-full shadow-lg">
+                        <i class="fas fa-utensils text-orange-500 text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-white text-3xl font-bold tracking-wide">Lucky Samosa</h1>
+                        <p class="text-orange-100 text-sm">Premium Frozen Food Products</p>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#products" class="text-white hover:text-orange-200 transition-colors font-semibold">Products</a>
+                    <a href="#about" class="text-white hover:text-orange-200 transition-colors font-semibold">About</a>
+                    <a href="#contact" class="text-white hover:text-orange-200 transition-colors font-semibold">Contact</a>
+                    <a href="https://wa.me/923214591508" class="whatsapp-btn text-white px-6 py-3 rounded-full font-bold inline-flex items-center space-x-2 shadow-lg">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>Order Now</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section py-20 text-center text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="floating-animation">
+                <h2 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    Authentic Taste,<br>
+                    <span class="text-yellow-300">Frozen Fresh</span>
+                </h2>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto font-light">
+                    Premium quality uncooked samosas, rolls, kababs and patties delivered fresh to your doorstep in Lahore
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="https://wa.me/923214591508" class="whatsapp-btn text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-xl">
+                        <i class="fab fa-whatsapp text-2xl"></i>
+                        <span>WhatsApp: 03214591508</span>
+                    </a>
+                    <a href="#products" class="order-btn text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-xl">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span>View Products</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-gray-50 to-transparent"></div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Our Premium Products</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Handcrafted with authentic recipes, frozen fresh for your convenience
+                </p>
+            </div>
+
+            <!-- Samosas Category -->
+            <div class="mb-20">
+                <h3 class="category-header text-3xl font-bold text-gray-800 mb-12">Delicious Samosas</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/b40aa6fb2fce023f9b55f4a5d26eb306" alt="Aalu Samosa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Aalu Samosa</h4>
+                            <p class="text-gray-600 mb-4">Classic potato-filled samosas with authentic spices</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Aalu Samosa" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/ab3de208bf199f96708e19911a7b6e1a" alt="Beef Samosa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Beef Samosa</h4>
+                            <p class="text-gray-600 mb-4">Rich beef filling with aromatic spices</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Beef Samosa" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/8ac953a7d7894f4dd694f63a1e23d30f" alt="Chicken Cheese Samosa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chicken Cheese Samosa</h4>
+                            <p class="text-gray-600 mb-4">Tender chicken with melted cheese - a modern twist</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Chicken Cheese Samosa" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/7a76f748dd24379a8e401a120646611a" alt="Chicken Malae Boti Samosa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chicken Malae Boti Samosa</h4>
+                            <p class="text-gray-600 mb-4">Creamy malae boti chicken in crispy pastry</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Chicken Malae Boti Samosa" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/05c1fdc60c8299b3993df155bee2da9c" alt="Chicken Sabzi Macaroni Samosa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chicken Sabzi Macaroni Samosa</h4>
+                            <p class="text-gray-600 mb-4">Unique fusion with chicken, vegetables and macaroni</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Chicken Sabzi Macaroni Samosa" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/943c3798389042a2f1591c4f9a185535" alt="Special Aalu Samosa" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Special Aalu Samosa</h4>
+                            <p class="text-gray-600 mb-4">Our signature potato samosa with special spice blend</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Special Aalu Samosa" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rolls & Sheets Category -->
+            <div class="mb-20">
+                <h3 class="category-header text-3xl font-bold text-gray-800 mb-12">Rolls & Sheets</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/7e14e6a4e7a4b7253e9c5c91a605a114" alt="Aalu Rolls" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Aalu Rolls</h4>
+                            <p class="text-gray-600 mb-4">Crispy potato rolls ready to fry</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Aalu Rolls" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/e595929646bb719cee4421a2b3f87448" alt="Chicken Sabzi Rolls" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chicken Sabzi Rolls</h4>
+                            <p class="text-gray-600 mb-4">Chicken and vegetable filled rolls</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Chicken Sabzi Rolls" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/bafeba0fc806b402346d8917f13a007b" alt="Chicken Kabab Rolls" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chicken Kabab Rolls</h4>
+                            <p class="text-gray-600 mb-4">Thin crispy rolls with kabab flavor</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Chicken Kabab Rolls" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/5fd999fd6b5ea972f2d8c6674ec7c86a" alt="Aalu Chicken Roll Sheets" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Roll Sheets</h4>
+                            <p class="text-gray-600 mb-4">Perfect sheets for making homemade crispy rolls</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Roll Sheets" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Kababs & Patties Category -->
+            <div class="mb-20">
+                <h3 class="category-header text-3xl font-bold text-gray-800 mb-12">Kababs & Patties</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/1aa57a5d93ba25e3662988ab525a439e" alt="Chicken Seekh Kabab" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Chicken Seekh Kabab</h4>
+                            <p class="text-gray-600 mb-4">Traditional seekh kabab ready to cook</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Chicken Seekh Kabab" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/123364be0f80670177a9a8310a1f2323" alt="Uncooked Patties" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Seasoned Patties</h4>
+                            <p class="text-gray-600 mb-4">Fresh uncooked patties with herbs and spices</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Seasoned Patties" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="food-card bg-white shadow-lg">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/077f3f1a8cb623ac0655b5cf3ba2b59d" alt="Various Patties" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h4 class="text-xl font-bold text-gray-800 mb-2">Mixed Patties</h4>
+                            <p class="text-gray-600 mb-4">Variety pack of different flavored patties</p>
+                            <a href="https://wa.me/923214591508?text=I want to order Mixed Patties" class="order-btn text-white px-6 py-2 rounded-full font-semibold inline-flex items-center space-x-2">
+                                <i class="fas fa-shopping-cart"></i>
+                                <span>Order Now</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Why Choose Lucky Samosa?</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Your trusted partner for authentic Pakistani frozen food products
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-award text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Premium Quality</h3>
+                    <p class="text-gray-600">Only the finest ingredients and authentic recipes</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-snowflake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Frozen Fresh</h3>
+                    <p class="text-gray-600">Preserved at peak freshness for maximum flavor</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-shipping-fast text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Quick Delivery</h3>
+                    <p class="text-gray-600">Fast delivery across Lahore with proper cold storage</p>
+                </div>
+                
+                <div class="text-center p-6 bg-white rounded-lg shadow-lg">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Trusted Service</h3>
+                    <p class="text-gray-600">Years of experience serving satisfied customers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Get In Touch</h2>
+                <div class="section-divider mb-6"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    Ready to order? Contact us through WhatsApp or visit our store
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div class="space-y-8">
+                        <div class="flex items-center space-x-4">
+                            <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
+                                <i class="fab fa-whatsapp text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">WhatsApp Orders</h3>
+                                <a href="https://wa.me/923214591508" class="text-orange-500 hover:text-orange-600 font-semibold text-lg">
+                                    03214591508
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">Store Location</h3>
+                                <p class="text-gray-600">Shop# 752, Sarwar Road<br>Saddar Bazar North Cantt. Lahore</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-center space-x-4">
+                            <div class="gradient-bg w-12 h-12 rounded-full flex items-center justify-center">
+                                <i class="fas fa-clock text-white text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-bold text-gray-800">Business Hours</h3>
+                                <p class="text-gray-600">Daily: 9:00 AM - 10:00 PM<br>Friday: 2:00 PM - 10:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-50 p-8 rounded-lg">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">Quick Order</h3>
+                        <div class="space-y-4">
+                            <a href="https://wa.me/923214591508?text=Hi, I want to place an order for samosas" class="whatsapp-btn text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-3 w-full justify-center">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                                <span>Order Samosas</span>
+                            </a>
+                            <a href="https://wa.me/923214591508?text=Hi, I want to place an order for rolls" class="whatsapp-btn text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-3 w-full justify-center">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                                <span>Order Rolls</span>
+                            </a>
+                            <a href="https://wa.me/923214591508?text=Hi, I want to place an order for kababs and patties" class="whatsapp-btn text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-3 w-full justify-center">
+                                <i class="fab fa-whatsapp text-xl"></i>
+                                <span>Order Kababs & Patties</span>
+                            </a>
+                            <a href="https://wa.me/923214591508?text=Hi, I want to know about all your products" class="order-btn text-white px-6 py-3 rounded-lg font-semibold inline-flex items-center space-x-3 w-full justify-center">
+                                <i class="fas fa-info-circle text-xl"></i>
+                                <span>Ask About Products</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="gradient-bg py-12 text-white">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div>
+                    <div class="flex items-center space-x-3 mb-4">
+                        <div class="bg-white p-2 rounded-full">
+                            <i class="fas fa-utensils text-orange-500 text-xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold">Lucky Samosa</h3>
+                    </div>
+                    <p class="text-orange-100 mb-4">
+                        Your trusted source for premium frozen Pakistani food products in Lahore.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.facebook.com/luckysamosa" class="social-icon bg-blue-600 p-3 rounded-full hover:bg-blue-700">
+                            <i class="fab fa-facebook-f text-white"></i>
+                        </a>
+                        <a href="https://www.instagram.com/luckysamosa" class="social-icon bg-pink-600 p-3 rounded-full hover:bg-pink-700">
+                            <i class="fab fa-instagram text-white"></i>
+                        </a>
+                        <a href="https://wa.me/923214591508" class="social-icon bg-green-600 p-3 rounded-full hover:bg-green-700">
+                            <i class="fab fa-whatsapp text-white"></i>
+                        </a>
+                        <a href="https://twitter.com/luckysamosa" class="social-icon bg-blue-400 p-3 rounded-full hover:bg-blue-500">
+                            <i class="fab fa-twitter text-white"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#products" class="text-orange-100 hover:text-white transition-colors">Our Products</a></li>
+                        <li><a href="#about" class="text-orange-100 hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#contact" class="text-orange-100 hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="https://wa.me/923214591508" class="text-orange-100 hover:text-white transition-colors">Place Order</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contact Info</h3>
+                    <div class="space-y-3">
+                        <p class="text-orange-100 flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            03214591508
+                        </p>
+                        <p class="text-orange-100 flex items-start">
+                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+                            Shop# 752, Sarwar Road<br>Saddar Bazar North Cantt. Lahore
+                        </p>
+                        <p class="text-orange-100 flex items-center">
+                            <i class="fas fa-clock mr-3"></i>
+                            Daily 9AM - 10PM
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-orange-300 mt-8 pt-8 text-center">
+                <p class="text-orange-100">
+                    © 2024 Lucky Samosa. All rights reserved. | Premium Frozen Food Products Lahore
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="https://wa.me/923214591508" class="whatsapp-btn text-white p-4 rounded-full shadow-2xl flex items-center space-x-3 group">
+            <i class="fab fa-whatsapp text-2xl"></i>
+            <span class="hidden group-hover:block whitespace-nowrap font-semibold">Order Now!</span>
+        </a>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add loading animation
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.3s ease-in-out';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+
+        // Enhanced hover effects for cards
+        document.querySelectorAll('.food-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
+    <script id="html_badge_script1">
+        window.__genspark_remove_badge_link = "https://www.genspark.ai/api/html_badge/" +
+            "remove_badge?token=To%2FBnjzloZ3UfQdcSaYfDq6ywN1jzcNHf6%2FmmRKY9Ldoi1H6bfaoetC7%2F0c33aPm6uf50KGpbYZXnL4d43Ci6AwitzVpICaFkn%2BSLsLhN%2Fm9yos5oIyvMfy2yE8h1ZW075DAJQoBbkOHTD2NELpXS%2FRxXp8ookdU3B7fQrw5JtpTZMozFpQdgiFnIqoaWBw6GI3dTP0L%2FnIRgcUpSL4TieOn4DJ6kw%2BETIRPZmLj9ayFKyEaIEbFtTeS2jURLxdjJgWTJAAE%2FgmxQCc%2Bi9JFRjr7mBwnD6P%2FmpbMH2kvzM4uGq9cTfu79cFuy4CixLzwMkMN2boZF2b1uxK03aBkH4SIAQbgpNPrDWqaZbz23PJbDw2W4yxEQVQgobZJJjVXjt6wPFJwoxfEk6LBFjgr5y63R7dMFUDocUuQNMs8A21F2WejGSeWjFnXYQKR7EeCkhOExxg7X1mYohT8wV%2FcUinT3vR33sLp1f3lvHYhAfmWsds97MWFlyEWLmyCFiDmBDGGpsxef%2FZue1%2FNezKDaA%3D%3D";
+        window.__genspark_locale = "en-US";
+        window.__genspark_token = "To/BnjzloZ3UfQdcSaYfDq6ywN1jzcNHf6/mmRKY9Ldoi1H6bfaoetC7/0c33aPm6uf50KGpbYZXnL4d43Ci6AwitzVpICaFkn+SLsLhN/m9yos5oIyvMfy2yE8h1ZW075DAJQoBbkOHTD2NELpXS/RxXp8ookdU3B7fQrw5JtpTZMozFpQdgiFnIqoaWBw6GI3dTP0L/nIRgcUpSL4TieOn4DJ6kw+ETIRPZmLj9ayFKyEaIEbFtTeS2jURLxdjJgWTJAAE/gmxQCc+i9JFRjr7mBwnD6P/mpbMH2kvzM4uGq9cTfu79cFuy4CixLzwMkMN2boZF2b1uxK03aBkH4SIAQbgpNPrDWqaZbz23PJbDw2W4yxEQVQgobZJJjVXjt6wPFJwoxfEk6LBFjgr5y63R7dMFUDocUuQNMs8A21F2WejGSeWjFnXYQKR7EeCkhOExxg7X1mYohT8wV/cUinT3vR33sLp1f3lvHYhAfmWsds97MWFlyEWLmyCFiDmBDGGpsxef/Zue1/NezKDaA==";
+    </script>
+    
+    <script id="html_notice_dialog_script" src="https://www.genspark.ai/notice_dialog.js"></script>
+    
