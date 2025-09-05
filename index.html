@@ -15,7 +15,7 @@
     
     <!-- Modern PNG favicons for various sizes -->
     <link rel="icon" type="image/png" sizes="16x16" href="https://page.gensparksite.com/v1/base64_upload/a330517b599918ec72377421d8e2f87a">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://page.gensparksite.com/v1/base64_upload/7e4db6a8e672d91599662ec43629069a">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-favicon-32.webp">
     <link rel="icon" type="image/png" sizes="48x48" href="https://page.gensparksite.com/v1/base64_upload/b9a5856e20f53b7124e09ef20c7bf95f">
     <link rel="icon" type="image/png" sizes="96x96" href="https://page.gensparksite.com/v1/base64_upload/348246d6a3c7d70f3c50438d29578729">
     
@@ -141,20 +141,12 @@
         }
         
         .announcement-bar {
-            overflow: hidden;
             background: #ff6347;
-            white-space: nowrap;
-        }
-        
-        .announcement-text {
-            animation: scroll-left 60s linear infinite;
-            display: inline-block;
-            padding-left: 100%;
-        }
-        
-        @keyframes scroll-left {
-            0% { transform: translate3d(100%, 0, 0); }
-            100% { transform: translate3d(-100%, 0, 0); }
+            color: white;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 14px;
+            font-weight: 600;
         }
         
         .search-container {
@@ -257,18 +249,32 @@
             background: #fef3cd;
         }
         
-        .logo-image {
-            width: 48px;
-            height: 48px;
+        .logo-main {
+            height: 60px;
+            width: auto;
+            max-width: 300px;
             object-fit: contain;
-            border-radius: 8px;
         }
         
-        .footer-logo {
-            width: 32px;
-            height: 32px;
+        .logo-mobile {
+            height: 48px;
+            width: auto;
+            max-width: 200px;
             object-fit: contain;
-            border-radius: 6px;
+        }
+        
+        .logo-footer {
+            height: 40px;
+            width: auto;
+            max-width: 150px;
+            object-fit: contain;
+        }
+        
+        @media (max-width: 768px) {
+            .logo-main {
+                height: 48px;
+                max-width: 200px;
+            }
         }
         
          {
@@ -282,10 +288,8 @@
 
 <body class="bg-gray-50">
     <!-- Announcement Bar -->
-    <div class="announcement-bar py-2 text-white text-sm font-semibold">
-        <div class="announcement-text">
-            🎉 Fresh & Authentic Pakistani Frozen Food Since 1994 | Premium Frozen Samosas & Snacks | Free Delivery on Orders Above Rs. 2000 | Call Now: 03214591508 | Premium Quality Guaranteed 🎉
-        </div>
+    <div class="announcement-bar">
+        🎉 Fresh & Authentic Pakistani Frozen Food Since 1994 | Premium Frozen Samosas & Snacks | Free Delivery on Orders Above Rs. 2000 | Call Now: 03214591508 | Premium Quality Guaranteed 🎉
     </div>
 
     <!-- Header -->
@@ -294,12 +298,18 @@
         <div class="container mx-auto px-6 py-4 relative z-10">
             <div class="flex items-center justify-between flex-wrap">
                 <div class="flex items-center space-x-4">
-                    <div class="bg-white p-2 rounded-full shadow-lg">
-                        <img src="https://page.gensparksite.com/v1/base64_upload/b9a5856e20f53b7124e09ef20c7bf95f" alt="Lucky Samosa Logo" class="logo-image">
+                    <!-- Professional Logo Implementation -->
+                    <div class="hidden md:block">
+                        <img src="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-header-logo.webp" 
+                             alt="Lucky Samosa - Premium Frozen Food Products Since 1994" 
+                             class="logo-main"
+                             onerror="this.src='https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1'">
                     </div>
-                    <div>
-                        <h1 class="text-white text-3xl font-bold tracking-wide">Lucky Samosa</h1>
-                        <p class="text-orange-100 text-sm font-medium">Business Since 1994 | Premium Frozen Food Products</p>
+                    <div class="md:hidden">
+                        <img src="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-mobile-header-logo.webp" 
+                             alt="Lucky Samosa" 
+                             class="logo-mobile"
+                             onerror="this.src='https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1'">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
@@ -614,10 +624,10 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
-                        <div class="bg-white p-2 rounded-full">
-                            <img src="https://page.gensparksite.com/v1/base64_upload/7e4db6a8e672d91599662ec43629069a" alt="Lucky Samosa Logo" class="footer-logo">
-                        </div>
-                        <h3 class="text-2xl font-bold">Lucky Samosa</h3>
+                        <img src="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-footer-logo.webp" 
+                             alt="Lucky Samosa Logo" 
+                             class="logo-footer"
+                             onerror="this.src='https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1'">
                     </div>
                     <p class="text-orange-100 mb-4">
                         Your trusted source for premium frozen Pakistani food products in Lahore since 1994.
@@ -701,7 +711,7 @@
     </div>
 
     <script>
-        // Product data with real images and CSV data
+        // Product data with real images
         const products = [
             {
                 name: "Aalu Samosa",
@@ -1142,6 +1152,7 @@
             });
         });
     </script>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"97a3b1fd2e0c34e9","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"97a65d2268ecd56b","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
+  
