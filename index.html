@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,21 +9,21 @@
     <meta name="author" content="Lucky Samosa">
     
     <!-- ============================================= -->
-    <!-- FAVICON IMPLEMENTATION - MODERN BEST PRACTICES -->
+    <!-- FAVICON IMPLEMENTATION - USING NEW LOGO -->
     <!-- ============================================= -->
     
-    <!-- Modern PNG favicons for various sizes -->
-    <link rel="icon" type="image/png" sizes="16x16" href="https://page.gensparksite.com/v1/base64_upload/a330517b599918ec72377421d8e2f87a">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-favicon-32.webp">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://page.gensparksite.com/v1/base64_upload/b9a5856e20f53b7124e09ef20c7bf95f">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://page.gensparksite.com/v1/base64_upload/348246d6a3c7d70f3c50438d29578729">
+    <!-- Modern PNG favicons using transparent logo -->
+    <link rel="icon" type="image/png" sizes="16x16" href="images/lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/lucky-samosa-logo-transparent.png">
     
     <!-- Apple Touch Icon for iOS devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://page.gensparksite.com/v1/base64_upload/3af6f11a4b0330844713587ee5415e40">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/lucky-samosa-logo-transparent.png">
     
-    <!-- Android Chrome icons for various uses -->
-    <link rel="icon" type="image/png" sizes="192x192" href="https://page.gensparksite.com/v1/base64_upload/34a848355029c789cc8507f421d3c391">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1">
+    <!-- Android Chrome icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="images/lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/lucky-samosa-logo-transparent.png">
     
     <!-- Additional meta tags for better favicon support -->
     <meta name="msapplication-TileColor" content="#ff8c00">
@@ -33,7 +32,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Lucky Samosa - Premium Frozen Food Products | Lahore">
     <meta property="og:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994. Premium samosas, rolls, kababs and patties with 30 years of experience.">
-    <meta property="og:image" content="https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1">
+    <meta property="og:image" content="images/lucky-samosa-logo-transparent.png">
     <meta property="og:url" content="https://faisalexecutive786-dotcom.github.io/Lucky-Samosa/">
     <meta property="og:type" content="business.business">
     <meta property="og:site_name" content="Lucky Samosa">
@@ -42,7 +41,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lucky Samosa - Premium Frozen Food Products">
     <meta name="twitter:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994.">
-    <meta name="twitter:image" content="https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1">
+    <meta name="twitter:image" content="images/lucky-samosa-logo-transparent.png">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -266,6 +265,7 @@
             background: #fef3cd;
         }
         
+        /* Updated Logo Styling */
         .logo-main {
             height: 60px;
             width: auto;
@@ -294,7 +294,7 @@
             }
         }
         
-         {
+        @media print {
             .announcement-bar, .modal, .search-container { display: none !important; }
             .floating-whatsapp { display: none !important; }
             body { font-size: 12px; }
@@ -315,18 +315,16 @@
         <div class="container mx-auto px-6 py-4 relative z-10">
             <div class="flex items-center justify-between flex-wrap">
                 <div class="flex items-center space-x-4">
-                    <!-- Professional Logo Implementation -->
+                    <!-- New Logo Implementation -->
                     <div class="hidden md:block">
-                        <img src="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-header-logo.webp" 
+                        <img src="images/lucky-samosa-logo.png" 
                              alt="Lucky Samosa - Premium Frozen Food Products Since 1994" 
-                             class="logo-main"
-                             onerror="this.src='https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1'">
+                             class="logo-main">
                     </div>
                     <div class="md:hidden">
-                        <img src="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-mobile-header-logo.webp" 
+                        <img src="images/lucky-samosa-logo.png" 
                              alt="Lucky Samosa" 
-                             class="logo-mobile"
-                             onerror="this.src='https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1'">
+                             class="logo-mobile">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
@@ -649,10 +647,10 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
-                        <img src="https://page.gensparksite.com/jupyter/tooluse_vtCtm8P_T62Mov5vrINTAQ/output/lucky-samosa-footer-logo.webp" 
+                        <!-- New Logo in Footer -->
+                        <img src="images/lucky-samosa-logo-transparent.png" 
                              alt="Lucky Samosa Logo" 
-                             class="logo-footer"
-                             onerror="this.src='https://page.gensparksite.com/v1/base64_upload/b89e223677b62ac5c61c9749625293e1'">
+                             class="logo-footer">
                     </div>
                     <p class="text-orange-100 mb-4">
                         Your trusted source for premium frozen Pakistani food products in Lahore since 1994.
@@ -694,7 +692,7 @@
                             03214591508
                         </p>
                         <p class="text-orange-100 flex items-start">
-                            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
+            <i class="fas fa-map-marker-alt mr-3 mt-1"></i>
                             Shop# 752, Sarwar Road<br>Saddar Bazar North Cantt. Lahore
                         </p>
                         <p class="text-orange-100 flex items-center">
@@ -1181,4 +1179,3 @@
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"97a68e8c3d7509d8","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.8.0","token":"4edd5f8ec12a48cfa682ab8261b80a79"}' crossorigin="anonymous"></script>
 </body>
 </html>
-  
