@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,42 +8,56 @@
     <meta name="description" content="Lucky Samosa offers authentic Pakistani frozen food products including premium samosas, rolls, kababs, and patties. Quality uncooked items delivered fresh in Lahore since 1994. Order now via WhatsApp!">
     <meta name="keywords" content="Lucky Samosa, Premium Frozen Samosas, Frozen Snacks, Pakistani food, samosa, kabab, rolls, patties, Lahore, frozen food delivery, authentic Pakistani snacks">
     <meta name="author" content="Lucky Samosa">
-    
+
     <!-- ============================================= -->
-    <!-- FAVICON IMPLEMENTATION - USING NEW LOGO -->
+    <!-- OPTIMIZED FAVICON IMPLEMENTATION -->
     <!-- ============================================= -->
-    
-    <!-- Modern PNG favicons using transparent logo -->
-    <link rel="icon" type="image/png" sizes="16x16" href="images/lucky-samosa-logo-transparent.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/lucky-samosa-logo-transparent.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="images/lucky-samosa-logo-transparent.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="images/lucky-samosa-logo-transparent.png">
-    
+
+    <!-- Standard favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- Modern PNG favicons with multiple sizes -->
+    <link rel="icon" type="image/png" sizes="16x16" href="lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="lucky-samosa-logo-transparent.png">
+
     <!-- Apple Touch Icon for iOS devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="images/lucky-samosa-logo-transparent.png">
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="lucky-samosa-logo-transparent.png">
+
     <!-- Android Chrome icons -->
-    <link rel="icon" type="image/png" sizes="192x192" href="images/lucky-samosa-logo-transparent.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="images/lucky-samosa-logo-transparent.png">
-    
-    <!-- Additional meta tags for better favicon support -->
+    <link rel="icon" type="image/png" sizes="192x192" href="lucky-samosa-logo-transparent.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="lucky-samosa-logo-transparent.png">
+
+    <!-- Microsoft application tiles -->
     <meta name="msapplication-TileColor" content="#ff8c00">
+    <meta name="msapplication-TileImage" content="lucky-samosa-logo-transparent.png">
     <meta name="theme-color" content="#ff8c00">
-    
-    <!-- Open Graph Meta Tags -->
+
+    <!-- ============================================= -->
+    <!-- OPTIMIZED OPEN GRAPH META TAGS -->
+    <!-- ============================================= -->
+
+    <!-- Open Graph Meta Tags for Social Media -->
     <meta property="og:title" content="Lucky Samosa - Premium Frozen Food Products | Lahore">
     <meta property="og:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994. Premium samosas, rolls, kababs and patties with 30 years of experience.">
-    <meta property="og:image" content="images/lucky-samosa-logo-transparent.png">
+    <meta property="og:image" content="lucky-samosa-logo-social.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Lucky Samosa - Premium Frozen Food Products Since 1994">
     <meta property="og:url" content="https://faisalexecutive786-dotcom.github.io/Lucky-Samosa/">
     <meta property="og:type" content="business.business">
     <meta property="og:site_name" content="Lucky Samosa">
-    
+    <meta property="og:locale" content="en_US">
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@LuckySamosa">
     <meta name="twitter:title" content="Lucky Samosa - Premium Frozen Food Products">
     <meta name="twitter:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994.">
-    <meta name="twitter:image" content="images/lucky-samosa-logo-transparent.png">
-    
+    <meta name="twitter:image" content="lucky-samosa-logo-social.png">
+    <meta name="twitter:image:alt" content="Lucky Samosa - Premium Frozen Food Products Since 1994">
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -77,68 +92,68 @@
         ]
     }
     </script>
-    
+
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <style>
         * {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         .gradient-bg {
             background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ff6347 100%);
         }
-        
+
         .food-card {
             transition: all 0.3s ease;
             border-radius: 15px;
             overflow: hidden;
             will-change: transform;
         }
-        
+
         .food-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(255, 140, 0, 0.3);
         }
-        
+
         .whatsapp-btn {
             background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
             transition: all 0.3s ease;
         }
-        
+
         .whatsapp-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
-        
+
         .order-btn {
             background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%);
             transition: all 0.3s ease;
         }
-        
+
         .order-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4);
         }
-        
+
         .hero-section {
             background: linear-gradient(135deg, rgba(255, 140, 0, 0.9) 0%, rgba(255, 99, 71, 0.9) 100%), 
                         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="%23ffffff" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="%23ffffff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
         }
-        
+
         .floating-animation {
             animation: float 3s ease-in-out infinite;
         }
-        
+
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
-        
+
         .announcement-bar {
             background: #ff6347;
             color: white;
@@ -150,12 +165,12 @@
             white-space: nowrap;
             position: relative;
         }
-        
+
         .announcement-text {
             display: inline-block;
             animation: scroll-left 20s linear infinite;
         }
-        
+
         @keyframes scroll-left {
             0% {
                 transform: translateX(100%);
@@ -164,11 +179,11 @@
                 transform: translateX(-100%);
             }
         }
-        
+
         .search-container {
             position: relative;
         }
-        
+
         .search-results {
             position: absolute;
             top: 100%;
@@ -181,33 +196,33 @@
             max-height: 300px;
             overflow-y: auto;
         }
-        
+
         .badge {
             font-size: 0.75rem;
             padding: 4px 8px;
             border-radius: 12px;
             font-weight: 600;
         }
-        
+
         .badge-bestseller {
             background: linear-gradient(135deg, #ff6b6b, #ff4757);
             color: white;
         }
-        
+
         .badge-save50 {
             background: linear-gradient(135deg, #00d2d3, #54a0ff);
             color: white;
         }
-        
+
         .lazy-image {
             opacity: 0;
             transition: opacity 0.3s;
         }
-        
+
         .lazy-image.loaded {
             opacity: 1;
         }
-        
+
         .modal {
             display: none;
             position: fixed;
@@ -218,82 +233,138 @@
             height: 100%;
             background-color: rgba(0,0,0,0.5);
         }
-        
+
         .modal.show {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .delivery-app {
             transition: all 0.3s ease;
         }
-        
+
         .delivery-app:hover {
             transform: scale(1.1);
         }
-        
+
         .social-icon {
             transition: all 0.3s ease;
         }
-        
+
         .social-icon:hover {
             transform: scale(1.2);
         }
-        
+
         .maps-btn {
             background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
             transition: all 0.3s ease;
         }
-        
+
         .maps-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(66, 133, 244, 0.4);
         }
-        
+
         .category-filter.active {
             background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%);
             color: white;
         }
-        
+
         .category-filter:not(.active) {
             background: #f3f4f6;
             color: #374151;
         }
-        
+
         .category-filter:not(.active):hover {
             background: #fef3cd;
         }
-        
-        /* Updated Logo Styling */
+
+        /* ============================================= */
+        /* OPTIMIZED RESPONSIVE LOGO STYLES */
+        /* ============================================= */
+
         .logo-main {
             height: 60px;
             width: auto;
             max-width: 300px;
             object-fit: contain;
+            transition: opacity 0.3s ease;
         }
-        
+
         .logo-mobile {
             height: 48px;
             width: auto;
             max-width: 200px;
             object-fit: contain;
+            transition: opacity 0.3s ease;
         }
-        
+
         .logo-footer {
             height: 40px;
             width: auto;
             max-width: 150px;
             object-fit: contain;
+            transition: opacity 0.3s ease;
         }
-        
+
+        /* Responsive breakpoints for logos */
+        @media (max-width: 1024px) {
+            .logo-main {
+                height: 52px;
+                max-width: 250px;
+            }
+        }
+
         @media (max-width: 768px) {
             .logo-main {
                 height: 48px;
                 max-width: 200px;
             }
+            .logo-mobile {
+                height: 44px;
+                max-width: 180px;
+            }
         }
-        
+
+        @media (max-width: 640px) {
+            .logo-main {
+                height: 44px;
+                max-width: 180px;
+            }
+            .logo-mobile {
+                height: 40px;
+                max-width: 160px;
+            }
+            .logo-footer {
+                height: 36px;
+                max-width: 120px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .logo-main {
+                height: 40px;
+                max-width: 160px;
+            }
+            .logo-mobile {
+                height: 36px;
+                max-width: 140px;
+            }
+            .logo-footer {
+                height: 32px;
+                max-width: 100px;
+            }
+        }
+
+        /* High DPI displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .logo-main, .logo-mobile, .logo-footer {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
         @media print {
             .announcement-bar, .modal, .search-container { display: none !important; }
             .floating-whatsapp { display: none !important; }
@@ -306,7 +377,7 @@
 <body class="bg-gray-50">
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        <div class="announcement-text">🎉 Fresh & Authentic Pakistani Frozen Food Since 1994 | Premium Frozen Samosas & Snacks | Free Delivery on Orders Above Rs. 2500 | Call Now: 03214591508 | Premium Quality Guaranteed 🎉</div>
+        <div class="announcement-text"> Fresh & Authentic Pakistani Frozen Food Since 1994 | Premium Frozen Samosas & Snacks | Free Delivery on Orders Above Rs. 2500 | Call Now: 03214591508 | Premium Quality Guaranteed </div>
     </div>
 
     <!-- Header -->
@@ -315,16 +386,36 @@
         <div class="container mx-auto px-6 py-4 relative z-10">
             <div class="flex items-center justify-between flex-wrap">
                 <div class="flex items-center space-x-4">
-                    <!-- New Logo Implementation -->
+                    <!-- ============================================= -->
+                    <!-- OPTIMIZED LOGO IMPLEMENTATION WITH WEBP AND RETINA SUPPORT -->
+                    <!-- ============================================= -->
+
+                    <!-- Desktop Logo with WebP and PNG fallback -->
                     <div class="hidden md:block">
-                        <img src="images/lucky-samosa-logo.png" 
-                             alt="Lucky Samosa - Premium Frozen Food Products Since 1994" 
-                             class="logo-main">
+                        <picture>
+                            <source srcset="lucky-samosa-logo@2x.webp 2x, lucky-samosa-logo.webp 1x" type="image/webp">
+                            <source srcset="lucky-samosa-logo@2x.png 2x, lucky-samosa-logo.png 1x" type="image/png">
+                            <img src="lucky-samosa-logo.png" 
+                                 alt="Lucky Samosa – Premium Frozen Food Products Since 1994" 
+                                 class="logo-main"
+                                 loading="eager"
+                                 width="300"
+                                 height="60">
+                        </picture>
                     </div>
+
+                    <!-- Mobile Logo with WebP and PNG fallback -->
                     <div class="md:hidden">
-                        <img src="images/lucky-samosa-logo.png" 
-                             alt="Lucky Samosa" 
-                             class="logo-mobile">
+                        <picture>
+                            <source srcset="lucky-samosa-logo@2x.webp 2x, lucky-samosa-logo.webp 1x" type="image/webp">
+                            <source srcset="lucky-samosa-logo@2x.png 2x, lucky-samosa-logo.png 1x" type="image/png">
+                            <img src="lucky-samosa-logo.png" 
+                                 alt="Lucky Samosa – Premium Frozen Food Products Since 1994" 
+                                 class="logo-mobile"
+                                 loading="eager"
+                                 width="200"
+                                 height="48">
+                        </picture>
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-6">
@@ -648,9 +739,16 @@
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <!-- New Logo in Footer -->
-                        <img src="images/lucky-samosa-logo-transparent.png" 
-                             alt="Lucky Samosa Logo" 
-                             class="logo-footer">
+                        <picture>
+                            <source srcset="lucky-samosa-logo-transparent@2x.webp 2x, lucky-samosa-logo-transparent.webp 1x" type="image/webp">
+                            <source srcset="lucky-samosa-logo-transparent@2x.png 2x, lucky-samosa-logo-transparent.png 1x" type="image/png">
+                            <img src="lucky-samosa-logo-transparent.png" 
+                                 alt="Lucky Samosa – Premium Frozen Food Products Since 1994" 
+                                 class="logo-footer"
+                                 loading="lazy"
+                                 width="150"
+                                 height="40">
+                        </picture>
                     </div>
                     <p class="text-orange-100 mb-4">
                         Your trusted source for premium frozen Pakistani food products in Lahore since 1994.
@@ -704,7 +802,7 @@
             </div>
             <div class="border-t border-orange-300 mt-8 pt-8 text-center">
                 <p class="text-orange-100">
-                    © 2024 Lucky Samosa. All rights reserved. | Premium Frozen Food Products Lahore | Established 1994
+                    Â© 2024 Lucky Samosa. All rights reserved. | Premium Frozen Food Products Lahore | Established 1994
                 </p>
             </div>
         </div>
@@ -1124,7 +1222,7 @@
         }
 
         function orderProduct(productName, quantity) {
-            const message = `Hi, I want to order ${productName} – ${quantity}. Please confirm availability.`;
+            const message = `Hi, I want to order ${productName} â ${quantity}. Please confirm availability.`;
             const whatsappUrl = `https://wa.me/923214591508?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
             closeModal();
