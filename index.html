@@ -9,39 +9,39 @@
     <meta name="author" content="Lucky Samosa">
     
     <!-- ============================================= -->
-    <!-- FAVICON IMPLEMENTATION - UPDATED WITH NEW LOGOS -->
+    <!-- OPTIMIZED FAVICON IMPLEMENTATION -->
     <!-- ============================================= -->
     
-    <!-- Modern PNG favicons for various sizes using new logo -->
-    <link rel="icon" type="image/png" sizes="16x16" href="https://page.gensparksite.com/v1/base64_upload/3375cea4b46ded6c3bb059c92eab4dc3">
-    <link rel="icon" type="image/png" sizes="32x32" href="https://page.gensparksite.com/v1/base64_upload/3375cea4b46ded6c3bb059c92eab4dc3">
-    <link rel="icon" type="image/png" sizes="48x48" href="https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b">
-    <link rel="icon" type="image/png" sizes="96x96" href="https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b">
+    <!-- Primary favicon (using your simple samosa icon) -->
+    <link rel="icon" type="image/png" sizes="32x32" href="https://page.gensparksite.com/v1/base64_upload/64130f9d2812151352ee49f4d19cf32d">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://page.gensparksite.com/v1/base64_upload/64130f9d2812151352ee49f4d19cf32d">
     
-    <!-- Apple Touch Icon for iOS devices -->
-    <link rel="apple-touch-icon" sizes="180x180" href="https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b">
+    <!-- Apple Touch Icon for iOS devices (using square logo) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42">
     
-    <!-- Android Chrome icons for various uses -->
-    <link rel="icon" type="image/png" sizes="192x192" href="https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b">
-    <link rel="icon" type="image/png" sizes="512x512" href="https://page.gensparksite.com/v1/base64_upload/581335f399cdc0ef0ee610d15995234f">
+    <!-- Android Chrome icons -->
+    <link rel="icon" type="image/png" sizes="192x192" href="https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42">
     
-    <!-- Additional meta tags for better favicon support -->
+    <!-- Microsoft tiles -->
     <meta name="msapplication-TileColor" content="#ff8c00">
+    <meta name="msapplication-TileImage" href="https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42">
+    
+    <!-- Theme color for better browser integration -->
     <meta name="theme-color" content="#ff8c00">
     
-    <!-- Open Graph Meta Tags - Updated with new logo -->
+    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Lucky Samosa - Premium Frozen Food Products | Lahore">
     <meta property="og:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994. Premium samosas, rolls, kababs and patties with 30 years of experience.">
-    <meta property="og:image" content="https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b">
+    <meta property="og:image" content="https://page.gensparksite.com/v1/base64_upload/d3ed1bfa7d9db80b5873d81635a4b40c">
     <meta property="og:url" content="https://faisalexecutive786-dotcom.github.io/Lucky-Samosa/">
     <meta property="og:type" content="business.business">
     <meta property="og:site_name" content="Lucky Samosa">
     
-    <!-- Twitter Card Meta Tags - Updated with new logo -->
+    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lucky Samosa - Premium Frozen Food Products">
     <meta name="twitter:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994.">
-    <meta name="twitter:image" content="https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b">
+    <meta name="twitter:image" content="https://page.gensparksite.com/v1/base64_upload/d3ed1bfa7d9db80b5873d81635a4b40c">
     
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
@@ -69,7 +69,7 @@
         ],
         "paymentAccepted": "Cash, JazzCash, EasyPaisa, Bank Transfer",
         "priceRange": "$$",
-        "logo": "https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b",
+        "logo": "https://page.gensparksite.com/v1/base64_upload/ab5f989e0ec068021543b72899c6249f",
         "sameAs": [
             "https://youtube.com/@luckyfrozezfood-b7y?si=bkipXKSvqVgcWSt9",
             "https://www.instagram.com/premiumluckysamosa?igsh=cTlnbnExeGUyNHUy&utm_source=qr",
@@ -257,31 +257,79 @@
             background: #fef3cd;
         }
         
-        /* Updated Logo Styles */
+        /* ============================================= */
+        /* OPTIMIZED LOGO STYLES */
+        /* ============================================= */
+        
+        /* Header logo styling with proper responsive behavior */
         .header-logo {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
+            object-position: center;
             border-radius: 12px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease;
+            background-color: white;
+            padding: 4px;
         }
         
+        .header-logo:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Footer logo styling */
         .footer-logo {
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             object-fit: contain;
+            object-position: center;
             border-radius: 8px;
+            background-color: transparent;
+            padding: 2px;
         }
         
         /* Mobile responsive logo adjustments */
         @media (max-width: 768px) {
             .header-logo {
-                width: 48px;
-                height: 48px;
+                width: 60px;
+                height: 60px;
             }
+            
             .footer-logo {
-                width: 32px;
-                height: 32px;
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .header-logo {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .footer-logo {
+                width: 35px;
+                height: 35px;
+            }
+        }
+        
+        /* Logo loading states */
+        .logo-loading {
+            opacity: 0.7;
+            animation: pulse 1.5s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+        }
+        
+        /* High DPI screens optimization */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .header-logo, .footer-logo {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
             }
         }
         
@@ -308,11 +356,18 @@
         <div class="container mx-auto px-6 py-4 relative z-10">
             <div class="flex items-center justify-between flex-wrap">
                 <div class="flex items-center space-x-4">
-                    <div class="bg-white p-3 rounded-full shadow-xl">
-                        <img src="https://page.gensparksite.com/v1/base64_upload/652bfceecbe523675f3a38ae303ae08b" 
-                             alt="Lucky Samosa - Premium Frozen Food Products Since 1994" 
+                    <div class="bg-white p-2 rounded-full shadow-xl">
+                        <!-- OPTIMIZED HEADER LOGO - Using white background version -->
+                        <img src="https://page.gensparksite.com/v1/base64_upload/ab5f989e0ec068021543b72899c6249f" 
+                             alt="Lucky Samosa — Premium Frozen Food Products Since 1994" 
                              class="header-logo"
-                             loading="eager">
+                             width="80" 
+                             height="80"
+                             loading="eager" 
+                             decoding="sync"
+                             onload="this.classList.remove('logo-loading')"
+                             onerror="this.onerror=null; this.src='https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42'; console.log('Header logo fallback loaded')"
+                             style="image-rendering: -webkit-optimize-contrast;">
                     </div>
                     <div>
                         <h1 class="text-white text-3xl font-bold tracking-wide">Lucky Samosa</h1>
@@ -632,10 +687,14 @@
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="bg-white p-2 rounded-full">
-                            <img src="https://page.gensparksite.com/v1/base64_upload/1b52343ca65f31fcd0c8d4dd9dd388e3" 
-                                 alt="Lucky Samosa Logo" 
+                            <!-- OPTIMIZED FOOTER LOGO - Using black background version for footer -->
+                            <img src="https://page.gensparksite.com/v1/base64_upload/18fde0ce987096491a4554de739ae8f1" 
+                                 alt="Lucky Samosa — Premium Frozen Food Products" 
                                  class="footer-logo"
-                                 loading="lazy">
+                                 width="50" 
+                                 height="50"
+                                 loading="lazy"
+                                 onerror="this.onerror=null; this.src='https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42';">
                         </div>
                         <h3 class="text-2xl font-bold">Lucky Samosa</h3>
                     </div>
@@ -946,7 +1005,25 @@
             setupEventListeners();
             setupLazyLoading();
             setupSmoothScrolling();
+            preloadCriticalImages();
         });
+
+        // Preload critical images for better performance
+        function preloadCriticalImages() {
+            const criticalImages = [
+                'https://page.gensparksite.com/v1/base64_upload/ab5f989e0ec068021543b72899c6249f',
+                'https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42',
+                'https://page.gensparksite.com/v1/base64_upload/64130f9d2812151352ee49f4d19cf32d'
+            ];
+            
+            criticalImages.forEach(src => {
+                const link = document.createElement('link');
+                link.rel = 'preload';
+                link.as = 'image';
+                link.href = src;
+                document.head.appendChild(link);
+            });
+        }
 
         // Render products function
         function renderProducts() {
@@ -1155,16 +1232,6 @@
 
         // Set active filter styling
         document.querySelector('.category-filter[data-category="all"]').classList.add('active');
-
-        // Performance optimizations
-        window.addEventListener('load', function() {
-            // Preload critical images
-            const criticalImages = products.slice(0, 6).map(product => {
-                const img = new Image();
-                img.src = product.image;
-                return img;
-            });
-        });
     </script>
 </body>
 </html>
