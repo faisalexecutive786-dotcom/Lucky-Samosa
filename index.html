@@ -11,24 +11,19 @@
     <!-- ============================================= -->
     <!-- OPTIMIZED FAVICON IMPLEMENTATION -->
     <!-- ============================================= -->
-    
     <!-- Primary favicon (using your simple samosa icon) -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://page.gensparksite.com/v1/base64_upload/64130f9d2812151352ee49f4d19cf32d">
     <link rel="icon" type="image/png" sizes="16x16" href="https://page.gensparksite.com/v1/base64_upload/64130f9d2812151352ee49f4d19cf32d">
-    
     <!-- Apple Touch Icon for iOS devices (using square logo) -->
     <link rel="apple-touch-icon" sizes="180x180" href="https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42">
-    
     <!-- Android Chrome icons -->
     <link rel="icon" type="image/png" sizes="192x192" href="https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42">
-    
     <!-- Microsoft tiles -->
     <meta name="msapplication-TileColor" content="#ff8c00">
     <meta name="msapplication-TileImage" href="https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42">
-    
     <!-- Theme color for better browser integration -->
     <meta name="theme-color" content="#ff8c00">
-    
+
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Lucky Samosa - Premium Frozen Food Products | Lahore">
     <meta property="og:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994. Premium samosas, rolls, kababs and patties with 30 years of experience.">
@@ -36,13 +31,13 @@
     <meta property="og:url" content="https://faisalexecutive786-dotcom.github.io/Lucky-Samosa/">
     <meta property="og:type" content="business.business">
     <meta property="og:site_name" content="Lucky Samosa">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lucky Samosa - Premium Frozen Food Products">
     <meta name="twitter:description" content="Authentic Pakistani frozen food products delivered fresh in Lahore since 1994.">
     <meta name="twitter:image" content="https://page.gensparksite.com/v1/base64_upload/d3ed1bfa7d9db80b5873d81635a4b40c">
-    
+
     <!-- Structured Data (JSON-LD) -->
     <script type="application/ld+json">
     {
@@ -78,30 +73,32 @@
         ]
     }
     </script>
-    
+
     <!-- Preload critical hero images for better performance -->
-    <link rel="preload" as="image" href="https://page.gensparksite.com/v1/base64_upload/6cd07bc800a15d27190e9fab3d6929e7" media="(min-width: 768px)">
-    <link rel="preload" as="image" href="https://page.gensparksite.com/v1/base64_upload/6a6f21eb99504ee6a8db9868d10c10e1" media="(max-width: 767px)">
-    
+    <link rel="preload" as="image" href="https://page.gensparksite.com/v1/base64_upload/6cd07bc800a15d27190e9fab3d6929e7" media="(min-width: 769px)">
+    <link rel="preload" as="image" href="https://page.gensparksite.com/v1/base64_upload/6a6f21eb99504ee6a8db9868d10c10e1" media="(max-width: 768px)">
+
     <!-- CSS Libraries -->
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
     <style>
         * {
             font-family: 'Poppins', sans-serif;
             scroll-behavior: smooth;
         }
-        
+
         .gradient-bg {
             background: linear-gradient(135deg, #ff8c00 0%, #ffa500 50%, #ff6347 100%);
         }
-        
+
         /* ============================================= */
-        /* HERO SLIDER STYLES */
+        /* SWIPER HERO SLIDER STYLES */
         /* ============================================= */
-        
         .hero-slider {
             position: relative;
             width: 100%;
@@ -109,238 +106,221 @@
             max-height: 1080px;
             min-height: 500px;
             overflow: hidden;
-            background-color: #1a1a1a; /* Prevent white flash during loading */
         }
-        
-        .hero-slider-container {
-            position: relative;
-            width: 500%; /* 5 slides × 100% = 500% */
+
+        .hero-slider .swiper {
+            width: 100%;
             height: 100%;
-            display: flex;
-            transition: transform 0.8s ease-in-out;
         }
-        
-        .hero-slide {
+
+        .hero-slider .swiper-slide {
             position: relative;
-            width: 20%; /* 100% ÷ 5 slides = 20% */
+            width: 100%;
             height: 100%;
-            flex-shrink: 0;
+            overflow: hidden;
         }
-        
-        .hero-slide img {
+
+        .hero-slider .swiper-slide picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .hero-slider .swiper-slide img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             object-position: center;
             display: block;
         }
-        
-        /* Responsive image switching */
-        .hero-slide .desktop-img {
-            display: block;
-        }
-        
-        .hero-slide .mobile-img {
-            display: none;
-        }
-        
-        @media (max-width: 767px) {
-            .hero-slide .desktop-img {
-                display: none;
-            }
-            
-            .hero-slide .mobile-img {
-                display: block;
-            }
-            
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
             .hero-slider {
                 height: 70vh;
                 max-height: 600px;
                 min-height: 400px;
             }
         }
-        
-        /* Navigation arrows */
-        .hero-nav-arrow {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            background: rgba(255, 255, 255, 0.4);
-            color: white;
-            border: none;
+
+        /* Swiper Navigation Arrows */
+        .hero-slider .swiper-button-next,
+        .hero-slider .swiper-button-prev {
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
             width: 50px;
             height: 50px;
-            border-radius: 50%;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            transition: all 0.3s ease;
-            z-index: 10;
+            margin-top: -25px;
             opacity: 0;
             visibility: hidden;
+            transition: all 0.3s ease;
         }
-        
-        .hero-slider:hover .hero-nav-arrow {
+
+        .hero-slider .swiper-button-next:after,
+        .hero-slider .swiper-button-prev:after {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .hero-slider:hover .swiper-button-next,
+        .hero-slider:hover .swiper-button-prev {
             opacity: 1;
             visibility: visible;
         }
-        
-        .hero-nav-arrow:hover {
-            background: rgba(255, 255, 255, 0.8);
-            color: #333;
-            transform: translateY(-50%) scale(1.1);
+
+        .hero-slider .swiper-button-next:hover,
+        .hero-slider .swiper-button-prev:hover {
+            background: rgba(255, 255, 255, 0.9);
+            color: #ff8c00;
+            transform: scale(1.1);
         }
-        
-        .hero-nav-arrow:focus {
-            outline: 2px solid #ff8c00;
-            outline-offset: 2px;
-        }
-        
-        .hero-nav-arrow.prev {
-            left: 20px;
-        }
-        
-        .hero-nav-arrow.next {
-            right: 20px;
-        }
-        
+
+        /* Hide navigation on mobile */
         @media (max-width: 640px) {
-            .hero-nav-arrow {
-                width: 40px;
-                height: 40px;
-                font-size: 1rem;
-            }
-            
-            .hero-nav-arrow.prev {
-                left: 10px;
-            }
-            
-            .hero-nav-arrow.next {
-                right: 10px;
+            .hero-slider .swiper-button-next,
+            .hero-slider .swiper-button-prev {
+                display: none;
             }
         }
-        
-        /* Pagination dots */
-        .hero-pagination {
-            position: absolute;
+
+        /* Swiper Pagination */
+        .hero-slider .swiper-pagination {
             bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            gap: 12px;
-            z-index: 10;
         }
-        
-        .hero-dot {
+
+        .hero-slider .swiper-pagination-bullet {
             width: 12px;
             height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.4);
-            border: none;
-            cursor: pointer;
+            background: rgba(255, 255, 255, 0.5);
+            opacity: 1;
+            margin: 0 6px;
             transition: all 0.3s ease;
         }
-        
-        .hero-dot:hover {
-            background: rgba(255, 255, 255, 0.8);
+
+        .hero-slider .swiper-pagination-bullet-active {
+            background: #ff8c00;
             transform: scale(1.2);
         }
-        
-        .hero-dot.active {
-            background: rgba(255, 140, 0, 0.9);
-            transform: scale(1.3);
+
+        .hero-slider .swiper-pagination-bullet:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: scale(1.1);
         }
-        
-        .hero-dot:focus {
-            outline: 2px solid white;
-            outline-offset: 2px;
-        }
-        
+
+        /* Mobile pagination adjustments */
         @media (max-width: 640px) {
-            .hero-pagination {
+            .hero-slider .swiper-pagination {
                 bottom: 20px;
-                gap: 8px;
             }
             
-            .hero-dot {
+            .hero-slider .swiper-pagination-bullet {
                 width: 10px;
                 height: 10px;
+                margin: 0 4px;
             }
         }
-        
-        /* Touch/swipe support indicators */
-        .hero-slider.touching .hero-slider-container {
-            transition: none;
+
+        /* CTA Overlay */
+        .hero-cta-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 0, 0, 0.2);
+            z-index: 10;
+            pointer-events: none;
         }
-        
+
+        .hero-cta-content {
+            text-align: center;
+            color: white;
+            padding: 0 1.5rem;
+            max-width: 64rem;
+            pointer-events: auto;
+        }
+
+        /* Lazy loading placeholder */
+        .hero-slider .swiper-slide img {
+            background: #1a1a1a;
+        }
+
+        /* Performance optimization */
+        .hero-slider .swiper-slide:not(.swiper-slide-active) img {
+            opacity: 0.8;
+        }
+
+        .hero-slider .swiper-slide.swiper-slide-active img {
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+
         /* ============================================= */
         /* EXISTING STYLES (PRESERVED) */
         /* ============================================= */
-        
         .food-card {
             transition: all 0.3s ease;
             border-radius: 15px;
             overflow: hidden;
             will-change: transform;
         }
-        
+
         .food-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(255, 140, 0, 0.3);
         }
-        
+
         .whatsapp-btn {
             background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
             transition: all 0.3s ease;
         }
-        
+
         .whatsapp-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
         }
-        
+
         .order-btn {
             background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%);
             transition: all 0.3s ease;
         }
-        
+
         .order-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(255, 140, 0, 0.4);
         }
-        
+
         .floating-animation {
             animation: float 3s ease-in-out infinite;
         }
-        
+
         @keyframes float {
             0%, 100% { transform: translateY(0px); }
             50% { transform: translateY(-10px); }
         }
-        
+
         .announcement-bar {
             overflow: hidden;
             background: #ff6347;
             white-space: nowrap;
         }
-        
+
         .announcement-text {
             animation: scroll-left 60s linear infinite;
             display: inline-block;
             padding-left: 100%;
         }
-        
+
         @keyframes scroll-left {
             0% { transform: translate3d(100%, 0, 0); }
             100% { transform: translate3d(-100%, 0, 0); }
         }
-        
+
         .search-container {
             position: relative;
         }
-        
+
         .search-results {
             position: absolute;
             top: 100%;
@@ -353,33 +333,33 @@
             max-height: 300px;
             overflow-y: auto;
         }
-        
+
         .badge {
             font-size: 0.75rem;
             padding: 4px 8px;
             border-radius: 12px;
             font-weight: 600;
         }
-        
+
         .badge-bestseller {
             background: linear-gradient(135deg, #ff6b6b, #ff4757);
             color: white;
         }
-        
+
         .badge-save50 {
             background: linear-gradient(135deg, #00d2d3, #54a0ff);
             color: white;
         }
-        
+
         .lazy-image {
             opacity: 0;
             transition: opacity 0.3s;
         }
-        
+
         .lazy-image.loaded {
             opacity: 1;
         }
-        
+
         .modal {
             display: none;
             position: fixed;
@@ -390,58 +370,56 @@
             height: 100%;
             background-color: rgba(0,0,0,0.5);
         }
-        
+
         .modal.show {
             display: flex;
             align-items: center;
             justify-content: center;
         }
-        
+
         .delivery-app {
             transition: all 0.3s ease;
         }
-        
+
         .delivery-app:hover {
             transform: scale(1.1);
         }
-        
+
         .social-icon {
             transition: all 0.3s ease;
         }
-        
+
         .social-icon:hover {
             transform: scale(1.2);
         }
-        
+
         .maps-btn {
             background: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
             transition: all 0.3s ease;
         }
-        
+
         .maps-btn:hover {
             transform: scale(1.05);
             box-shadow: 0 10px 25px rgba(66, 133, 244, 0.4);
         }
-        
+
         .category-filter.active {
             background: linear-gradient(135deg, #ff8c00 0%, #ff6347 100%);
             color: white;
         }
-        
+
         .category-filter:not(.active) {
             background: #f3f4f6;
             color: #374151;
         }
-        
+
         .category-filter:not(.active):hover {
             background: #fef3cd;
         }
-        
+
         /* ============================================= */
         /* OPTIMIZED LOGO STYLES */
         /* ============================================= */
-        
-        /* Header logo styling with proper responsive behavior */
         .header-logo {
             width: 80px;
             height: 80px;
@@ -453,12 +431,11 @@
             background-color: white;
             padding: 4px;
         }
-        
+
         .header-logo:hover {
             transform: scale(1.05);
         }
-        
-        /* Footer logo styling */
+
         .footer-logo {
             width: 50px;
             height: 50px;
@@ -468,56 +445,59 @@
             background-color: transparent;
             padding: 2px;
         }
-        
-        /* Mobile responsive logo adjustments */
+
         @media (max-width: 768px) {
             .header-logo {
                 width: 60px;
                 height: 60px;
             }
-            
             .footer-logo {
                 width: 40px;
                 height: 40px;
             }
         }
-        
+
         @media (max-width: 480px) {
             .header-logo {
                 width: 50px;
                 height: 50px;
             }
-            
             .footer-logo {
                 width: 35px;
                 height: 35px;
             }
         }
-        
-        /* Logo loading states */
+
         .logo-loading {
             opacity: 0.7;
             animation: pulse 1.5s infinite;
         }
-        
+
         @keyframes pulse {
             0%, 100% { opacity: 0.7; }
             50% { opacity: 1; }
         }
-        
-        /* High DPI screens optimization */
+
         @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
             .header-logo, .footer-logo {
                 image-rendering: -webkit-optimize-contrast;
                 image-rendering: crisp-edges;
             }
         }
-        
+
         @media print {
-            .announcement-bar, .modal, .search-container { display: none !important; }
-            .floating-whatsapp { display: none !important; }
-            body { font-size: 12px; }
-            .food-card { break-inside: avoid; }
+            .announcement-bar, .modal, .search-container {
+                display: none !important;
+            }
+            .floating-whatsapp {
+                display: none !important;
+            }
+            body {
+                font-size: 12px;
+            }
+            .food-card {
+                break-inside: avoid;
+            }
         }
     </style>
 </head>
@@ -537,15 +517,14 @@
             <div class="flex items-center justify-between flex-wrap">
                 <div class="flex items-center space-x-4">
                     <div class="bg-white p-2 rounded-full shadow-xl">
-                        <!-- OPTIMIZED HEADER LOGO - Using white background version -->
                         <img src="https://page.gensparksite.com/v1/base64_upload/ab5f989e0ec068021543b72899c6249f" 
                              alt="Lucky Samosa — Premium Frozen Food Products Since 1994" 
-                             class="header-logo"
+                             class="header-logo" 
                              width="80" 
-                             height="80"
+                             height="80" 
                              loading="eager" 
                              decoding="sync"
-                             onload="this.classList.remove('logo-loading')"
+                             onload="this.classList.remove('logo-loading')" 
                              onerror="this.onerror=null; this.src='https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42'; console.log('Header logo fallback loaded')"
                              style="image-rendering: -webkit-optimize-contrast;">
                     </div>
@@ -591,64 +570,56 @@
         </div>
     </header>
 
-    <!-- Hero Slider Section -->
+    <!-- Hero Slider Section with Swiper.js -->
     <section id="hero" class="hero-slider">
-        <div class="hero-slider-container">
-            <!-- Slide 1 -->
-            <div class="hero-slide">
-                <img src="https://page.gensparksite.com/v1/base64_upload/6cd07bc800a15d27190e9fab3d6929e7" 
-                     alt="Fresh frozen food hero image — premium frozen meals" 
-                     class="desktop-img"
-                     loading="eager">
-                <img src="https://page.gensparksite.com/v1/base64_upload/6a6f21eb99504ee6a8db9868d10c10e1" 
-                     alt="Fresh frozen food hero image — premium frozen meals" 
-                     class="mobile-img"
-                     loading="lazy">
+        <div class="swiper heroSwiper">
+            <div class="swiper-wrapper">
+                <!-- Slide 1 -->
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="https://page.gensparksite.com/v1/base64_upload/6a6f21eb99504ee6a8db9868d10c10e1" 
+                                media="(max-width: 768px)">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/6cd07bc800a15d27190e9fab3d6929e7" 
+                             alt="Lucky Samosa - Fresh Frozen Food Hero Banner 1"
+                             loading="eager"
+                             decoding="async">
+                    </picture>
+                </div>
+                <!-- Slide 2 -->
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="https://page.gensparksite.com/v1/base64_upload/530512678c0ec2c020817beb87fd1df4" 
+                                media="(max-width: 768px)">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/1848458e43399c8e3432df74c32076ac" 
+                             alt="Lucky Samosa - Gourmet Premium Frozen Food Hero Banner 2"
+                             loading="lazy"
+                             decoding="async">
+                    </picture>
+                </div>
+                <!-- Slide 3 -->
+                <div class="swiper-slide">
+                    <picture>
+                        <source srcset="https://page.gensparksite.com/v1/base64_upload/dace291153bcaefa16d720ec97002ad2" 
+                                media="(max-width: 768px)">
+                        <img src="https://page.gensparksite.com/v1/base64_upload/c1131c083d9119f060ba9d01151626e9" 
+                             alt="Lucky Samosa - Fresh Ingredients and Healthy Frozen Food Hero Banner 3"
+                             loading="lazy"
+                             decoding="async">
+                    </picture>
+                </div>
             </div>
+
+            <!-- Navigation arrows -->
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"></div>
+            <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"></div>
             
-            <!-- Slide 2 -->
-            <div class="hero-slide">
-                <img src="https://page.gensparksite.com/v1/base64_upload/1848458e43399c8e3432df74c32076ac" 
-                     alt="Gourmet meal close-up hero image" 
-                     class="desktop-img"
-                     loading="lazy">
-                <img src="https://page.gensparksite.com/v1/base64_upload/530512678c0ec2c020817beb87fd1df4" 
-                     alt="Gourmet meal close-up hero image" 
-                     class="mobile-img"
-                     loading="lazy">
-            </div>
-            
-            <!-- Slide 3 -->
-            <div class="hero-slide">
-                <img src="https://page.gensparksite.com/v1/base64_upload/c1131c083d9119f060ba9d01151626e9" 
-                     alt="Healthy ingredients and prepared dish hero image" 
-                     class="desktop-img"
-                     loading="lazy">
-                <img src="https://page.gensparksite.com/v1/base64_upload/dace291153bcaefa16d720ec97002ad2" 
-                     alt="Healthy ingredients and prepared dish hero image" 
-                     class="mobile-img"
-                     loading="lazy">
-            </div>
+            <!-- Pagination dots -->
+            <div class="swiper-pagination" role="tablist" aria-label="Hero image slider pagination"></div>
         </div>
-        
-        <!-- Navigation arrows -->
-        <button class="hero-nav-arrow prev" onclick="heroSlider.prevSlide()" aria-label="Previous slide">
-            <i class="fas fa-chevron-left"></i>
-        </button>
-        <button class="hero-nav-arrow next" onclick="heroSlider.nextSlide()" aria-label="Next slide">
-            <i class="fas fa-chevron-right"></i>
-        </button>
-        
-        <!-- Pagination dots -->
-        <div class="hero-pagination">
-            <button class="hero-dot active" onclick="heroSlider.goToSlide(0)" aria-label="Slide 1 of 3"></button>
-            <button class="hero-dot" onclick="heroSlider.goToSlide(1)" aria-label="Slide 2 of 3"></button>
-            <button class="hero-dot" onclick="heroSlider.goToSlide(2)" aria-label="Slide 3 of 3"></button>
-        </div>
-        
+
         <!-- CTA Overlay -->
-        <div class="absolute inset-0 flex items-center justify-center bg-black bg-opacity-20 z-5">
-            <div class="text-center text-white px-6 max-w-4xl">
+        <div class="hero-cta-overlay">
+            <div class="hero-cta-content">
                 <div class="floating-animation">
                     <h2 class="text-4xl md:text-7xl font-bold mb-6 leading-tight drop-shadow-lg">
                         Authentic Taste,<br>
@@ -657,23 +628,26 @@
                     <p class="text-lg md:text-2xl mb-8 font-light drop-shadow-md">
                         Premium quality uncooked samosas, rolls, kababs and patties delivered fresh to your doorstep in Lahore
                     </p>
-                    
                     <!-- Search Bar -->
                     <div class="search-container max-w-md mx-auto mb-8">
                         <div class="relative">
-                            <input type="text" id="product-search" placeholder="Search products..." 
-                                   class="w-full px-6 py-4 text-gray-800 rounded-full border-0 focus:ring-4 focus:ring-orange-300 outline-none text-lg">
+                            <input type="text" 
+                                   id="product-search" 
+                                   placeholder="Search products..." 
+                                   class="w-full px-6 py-4 text-gray-800 rounded-full border-0 focus:ring-4 focus:ring-orange-300 outline-none text-lg"
+                                   aria-label="Search products">
                             <i class="fas fa-search absolute right-6 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
                         </div>
                         <div id="search-results" class="search-results hidden"></div>
                     </div>
-                    
                     <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="https://wa.me/923214591508" class="whatsapp-btn text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-xl">
+                        <a href="https://wa.me/923214591508" 
+                           class="whatsapp-btn text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-xl">
                             <i class="fab fa-whatsapp text-2xl"></i>
                             <span>WhatsApp: 03214591508</span>
                         </a>
-                        <a href="#products" class="order-btn text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-xl">
+                        <a href="#products" 
+                           class="order-btn text-white px-8 py-4 rounded-full font-bold text-lg inline-flex items-center space-x-3 shadow-xl">
                             <i class="fas fa-shopping-cart text-xl"></i>
                             <span>View Products</span>
                         </a>
@@ -738,7 +712,7 @@
                     <p class="text-gray-600">Premium frozen samosas preserved at peak freshness for maximum flavor</p>
                 </div>
                 <div class="text-center p-6 bg-white rounded-lg shadow-lg">
-                    <div class="gradient-bg w-16 h-16 rounded-full flex-items-center justify-center mx-auto mb-4">
+                    <div class="gradient-bg w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                         <i class="fas fa-shipping-fast text-white text-2xl"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-800 mb-2">Quick Delivery</h3>
@@ -788,7 +762,7 @@
                             <i class="fas fa-motorcycle text-white text-2xl"></i>
                         </div>
                         <h3 class="font-bold text-gray-800">Bykea</h3>
-                    </a>
+                    </div>
                 </div>
                 <div class="delivery-app text-center">
                     <a href="#" onclick="openDeliveryApp('indrive')" class="block p-6 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl">
@@ -847,7 +821,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Payment Methods -->
                     <div class="space-y-8">
                         <h3 class="text-2xl font-bold text-gray-800 mb-6">Payment Methods</h3>
@@ -895,13 +869,12 @@
                 <div class="mt-12">
                     <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">Find Our Store</h3>
                     <div class="bg-white p-4 rounded-lg shadow-lg">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.5647!2d74.3747978!3d31.5483932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzU0LjIiTiA3NMKwMjInMzguNSJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0; border-radius: 8px;" 
-                            allowfullscreen="" 
-                            loading="lazy">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3402.5647!2d74.3747978!3d31.5483932!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDMyJzU0LjIiTiA3NMKwMjInMzguNSJF!5e0!3m2!1sen!2s!4v1620000000000!5m2!1sen!2s" 
+                                width="100%" 
+                                height="300" 
+                                style="border:0; border-radius: 8px;" 
+                                allowfullscreen="" 
+                                loading="lazy">
                         </iframe>
                         <div class="text-center mt-4">
                             <a href="https://www.google.com/maps/place/31%C2%B032'54.2%22N+74%C2%B022'38.5%22E/@31.5483934,74.3747862,707m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d31.5483889!4d74.3773611?hl=en&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D" 
@@ -924,13 +897,12 @@
                 <div>
                     <div class="flex items-center space-x-3 mb-4">
                         <div class="bg-white p-2 rounded-full">
-                            <!-- OPTIMIZED FOOTER LOGO - Using black background version for footer -->
                             <img src="https://page.gensparksite.com/v1/base64_upload/18fde0ce987096491a4554de739ae8f1" 
                                  alt="Lucky Samosa — Premium Frozen Food Products" 
-                                 class="footer-logo"
+                                 class="footer-logo" 
                                  width="50" 
-                                 height="50"
-                                 loading="lazy"
+                                 height="50" 
+                                 loading="lazy" 
                                  onerror="this.onerror=null; this.src='https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42';">
                         </div>
                         <h3 class="text-2xl font-bold">Lucky Samosa</h3>
@@ -939,23 +911,27 @@
                         Your trusted source for premium frozen Pakistani food products in Lahore since 1994.
                     </p>
                     <div class="flex space-x-4">
-                        <a href="https://youtube.com/@luckyfrozezfood-b7y?si=bkipXKSvqVgcWSt9" target="_blank" 
-                           class="social-icon bg-red-600 p-3 rounded-full hover:bg-red-700"
+                        <a href="https://youtube.com/@luckyfrozezfood-b7y?si=bkipXKSvqVgcWSt9" 
+                           target="_blank" 
+                           class="social-icon bg-red-600 p-3 rounded-full hover:bg-red-700" 
                            aria-label="Lucky Samosa YouTube Channel">
                             <i class="fab fa-youtube text-white"></i>
                         </a>
-                        <a href="https://www.instagram.com/premiumluckysamosa?igsh=cTlnbnExeGUyNHUy&utm_source=qr" target="_blank" 
-                           class="social-icon bg-pink-600 p-3 rounded-full hover:bg-pink-700"
+                        <a href="https://www.instagram.com/premiumluckysamosa?igsh=cTlnbnExeGUyNHUy&utm_source=qr" 
+                           target="_blank" 
+                           class="social-icon bg-pink-600 p-3 rounded-full hover:bg-pink-700" 
                            aria-label="Lucky Samosa Instagram Profile">
                             <i class="fab fa-instagram text-white"></i>
                         </a>
-                        <a href="https://www.tiktok.com/@lucky.frozen.food" target="_blank" 
-                           class="social-icon bg-gray-800 p-3 rounded-full hover:bg-gray-900"
+                        <a href="https://www.tiktok.com/@lucky.frozen.food" 
+                           target="_blank" 
+                           class="social-icon bg-gray-800 p-3 rounded-full hover:bg-gray-900" 
                            aria-label="Lucky Samosa TikTok Profile">
                             <i class="fab fa-tiktok text-white"></i>
                         </a>
-                        <a href="https://www.facebook.com/share/173fC3JkwP/?mibextid=wwXIfr" target="_blank" 
-                           class="social-icon bg-blue-600 p-3 rounded-full hover:bg-blue-700"
+                        <a href="https://www.facebook.com/share/173fC3JkwP/?mibextid=wwXIfr" 
+                           target="_blank" 
+                           class="social-icon bg-blue-600 p-3 rounded-full hover:bg-blue-700" 
                            aria-label="Lucky Samosa Facebook Page">
                             <i class="fab fa-facebook-f text-white"></i>
                         </a>
@@ -1021,213 +997,143 @@
         </div>
     </div>
 
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <script>
         // ============================================= //
-        // HERO SLIDER FUNCTIONALITY
+        // SWIPER HERO SLIDER INITIALIZATION           //
         // ============================================= //
         
-        class HeroSlider {
-            constructor() {
-                this.currentSlide = 0;
-                this.totalSlides = 3;
-                this.isAutoPlaying = true;
-                this.autoPlayInterval = null;
-                this.pauseTimeout = null;
+        // Initialize Swiper when DOM is loaded
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroSwiper = new Swiper('.heroSwiper', {
+                // Basic settings
+                slidesPerView: 1,
+                spaceBetween: 0,
+                loop: true,
+                speed: 800,
+                effect: 'slide',
                 
-                this.container = document.querySelector('.hero-slider-container');
-                this.dots = document.querySelectorAll('.hero-dot');
-                this.slider = document.querySelector('.hero-slider');
+                // Autoplay configuration
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true
+                },
                 
-                this.init();
-            }
-            
-            init() {
-                this.startAutoPlay();
-                this.setupTouchEvents();
-                this.setupKeyboardEvents();
-                this.setupHoverEvents();
+                // Navigation arrows (desktop only)
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
                 
-                // Preload all images
-                this.preloadImages();
-            }
-            
-            preloadImages() {
-                const images = document.querySelectorAll('.hero-slide img');
-                images.forEach(img => {
-                    if (img.loading !== 'eager') {
-                        img.loading = 'eager';
-                    }
-                });
-            }
-            
-            goToSlide(slideIndex) {
-                if (slideIndex < 0 || slideIndex >= this.totalSlides) return;
+                // Pagination dots
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                    dynamicBullets: false,
+                    renderBullet: function (index, className) {
+                        return '<span class="' + className + '" role="tab" aria-label="Go to slide ' + (index + 1) + '"></span>';
+                    },
+                },
                 
-                this.currentSlide = slideIndex;
-                const translateX = -(slideIndex * (100 / this.totalSlides));
-                this.container.style.transform = `translateX(${translateX}%)`;
+                // Keyboard control
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true,
+                },
                 
-                // Update dots
-                this.dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === slideIndex);
-                    dot.setAttribute('aria-label', `Slide ${index + 1} of ${this.totalSlides}`);
-                });
+                // Touch/swipe settings
+                touchRatio: 1,
+                touchAngle: 45,
+                grabCursor: true,
                 
-                // Restart autoplay after manual navigation
-                this.restartAutoPlay();
-            }
-            
-            nextSlide() {
-                const nextIndex = (this.currentSlide + 1) % this.totalSlides;
-                this.goToSlide(nextIndex);
-            }
-            
-            prevSlide() {
-                const prevIndex = (this.currentSlide - 1 + this.totalSlides) % this.totalSlides;
-                this.goToSlide(prevIndex);
-            }
-            
-            startAutoPlay() {
-                if (this.autoPlayInterval) return;
+                // Accessibility
+                a11y: {
+                    prevSlideMessage: 'Previous slide',
+                    nextSlideMessage: 'Next slide',
+                    firstSlideMessage: 'This is the first slide',
+                    lastSlideMessage: 'This is the last slide',
+                    paginationBulletMessage: 'Go to slide {{index}}'
+                },
                 
-                this.autoPlayInterval = setInterval(() => {
-                    if (this.isAutoPlaying) {
-                        this.nextSlide();
-                    }
-                }, 3000); // 3 seconds
-            }
-            
-            stopAutoPlay() {
-                if (this.autoPlayInterval) {
-                    clearInterval(this.autoPlayInterval);
-                    this.autoPlayInterval = null;
-                }
-            }
-            
-            pauseAutoPlay() {
-                this.isAutoPlaying = false;
+                // Lazy loading
+                lazy: {
+                    loadPrevNext: true,
+                    loadPrevNextAmount: 1,
+                },
                 
-                // Resume after 2 seconds of no interaction
-                if (this.pauseTimeout) {
-                    clearTimeout(this.pauseTimeout);
-                }
+                // Preload images
+                preloadImages: false,
+                updateOnImagesReady: true,
                 
-                this.pauseTimeout = setTimeout(() => {
-                    this.isAutoPlaying = true;
-                }, 2000);
-            }
-            
-            restartAutoPlay() {
-                this.stopAutoPlay();
-                this.isAutoPlaying = true;
-                this.startAutoPlay();
-            }
-            
-            setupTouchEvents() {
-                let touchStartX = 0;
-                let touchEndX = 0;
-                let isDragging = false;
-                
-                this.slider.addEventListener('touchstart', (e) => {
-                    touchStartX = e.changedTouches[0].screenX;
-                    isDragging = true;
-                    this.slider.classList.add('touching');
-                    this.pauseAutoPlay();
-                }, { passive: true });
-                
-                this.slider.addEventListener('touchend', (e) => {
-                    if (!isDragging) return;
-                    
-                    touchEndX = e.changedTouches[0].screenX;
-                    this.handleSwipe(touchStartX, touchEndX);
-                    isDragging = false;
-                    this.slider.classList.remove('touching');
-                }, { passive: true });
-                
-                // Mouse events for desktop
-                this.slider.addEventListener('mousedown', (e) => {
-                    touchStartX = e.screenX;
-                    isDragging = true;
-                    this.slider.classList.add('touching');
-                    this.pauseAutoPlay();
-                });
-                
-                this.slider.addEventListener('mouseup', (e) => {
-                    if (!isDragging) return;
-                    
-                    touchEndX = e.screenX;
-                    this.handleSwipe(touchStartX, touchEndX);
-                    isDragging = false;
-                    this.slider.classList.remove('touching');
-                });
-                
-                this.slider.addEventListener('mouseleave', () => {
-                    if (isDragging) {
-                        isDragging = false;
-                        this.slider.classList.remove('touching');
-                    }
-                });
-            }
-            
-            handleSwipe(startX, endX) {
-                const threshold = 50; // Minimum swipe distance
-                const difference = startX - endX;
-                
-                if (Math.abs(difference) > threshold) {
-                    if (difference > 0) {
-                        this.nextSlide(); // Swipe left, go to next
-                    } else {
-                        this.prevSlide(); // Swipe right, go to previous
-                    }
-                }
-            }
-            
-            setupKeyboardEvents() {
-                document.addEventListener('keydown', (e) => {
-                    if (this.isSliderInView()) {
-                        switch(e.key) {
-                            case 'ArrowLeft':
-                                e.preventDefault();
-                                this.prevSlide();
-                                this.pauseAutoPlay();
-                                break;
-                            case 'ArrowRight':
-                                e.preventDefault();
-                                this.nextSlide();
-                                this.pauseAutoPlay();
-                                break;
+                // Responsive breakpoints
+                breakpoints: {
+                    // Mobile
+                    0: {
+                        navigation: {
+                            enabled: false,
+                        },
+                        pagination: {
+                            enabled: true,
+                        }
+                    },
+                    // Desktop
+                    641: {
+                        navigation: {
+                            enabled: true,
+                        },
+                        pagination: {
+                            enabled: true,
                         }
                     }
-                });
-            }
+                },
+                
+                // Event callbacks
+                on: {
+                    init: function() {
+                        console.log('Hero slider initialized');
+                        // Add ARIA labels to slides
+                        this.slides.forEach((slide, index) => {
+                            slide.setAttribute('aria-label', `Slide ${index + 1} of ${this.slides.length}`);
+                        });
+                    },
+                    slideChange: function() {
+                        // Update active slide accessibility
+                        this.slides.forEach((slide, index) => {
+                            slide.setAttribute('aria-hidden', index !== this.activeIndex);
+                        });
+                    },
+                    touchStart: function() {
+                        // Pause autoplay on touch
+                        this.autoplay.stop();
+                    },
+                    touchEnd: function() {
+                        // Resume autoplay after touch
+                        setTimeout(() => {
+                            this.autoplay.start();
+                        }, 2000);
+                    }
+                }
+            });
             
-            setupHoverEvents() {
-                this.slider.addEventListener('mouseenter', () => {
-                    this.pauseAutoPlay();
-                });
-                
-                this.slider.addEventListener('mouseleave', () => {
-                    this.isAutoPlaying = true;
-                });
-                
-                // Pause on focus for accessibility
-                this.slider.addEventListener('focusin', () => {
-                    this.pauseAutoPlay();
-                });
-                
-                this.slider.addEventListener('focusout', () => {
-                    this.isAutoPlaying = true;
-                });
-            }
+            // Pause autoplay when page is not visible
+            document.addEventListener('visibilitychange', function() {
+                if (document.hidden) {
+                    heroSwiper.autoplay.stop();
+                } else {
+                    heroSwiper.autoplay.start();
+                }
+            });
             
-            isSliderInView() {
-                const rect = this.slider.getBoundingClientRect();
-                return rect.top < window.innerHeight && rect.bottom > 0;
-            }
-        }
-        
-        // Initialize hero slider
-        let heroSlider;
+            // Initialize other components
+            initializeApp();
+        });
+
+        // ============================================= //
+        // EXISTING JAVASCRIPT FUNCTIONALITY           //
+        // ============================================= //
         
         // Product data with real images and CSV data
         const products = [
@@ -1441,21 +1347,18 @@
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const orderModal = document.getElementById('order-modal');
+
         let currentFilter = 'all';
         let searchTerm = '';
 
         // Initialize the app
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize hero slider
-            heroSlider = new HeroSlider();
-            
-            // Initialize other components
+        function initializeApp() {
             renderProducts();
             setupEventListeners();
             setupLazyLoading();
             setupSmoothScrolling();
             preloadCriticalImages();
-        });
+        }
 
         // Preload critical images for better performance
         function preloadCriticalImages() {
@@ -1464,7 +1367,7 @@
                 'https://page.gensparksite.com/v1/base64_upload/aec9924d8ee763114529164ee8aa1b42',
                 'https://page.gensparksite.com/v1/base64_upload/64130f9d2812151352ee49f4d19cf32d'
             ];
-            
+
             criticalImages.forEach(src => {
                 const link = document.createElement('link');
                 link.rel = 'preload';
@@ -1497,7 +1400,7 @@
                         <img src="${product.image}" 
                              alt="${product.name}" 
                              class="lazy-image w-full h-48 object-cover" 
-                             loading="lazy"
+                             loading="lazy" 
                              onerror="this.src='https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80'">
                         ${product.badge ? `<span class="badge badge-${product.badge.toLowerCase().replace('-', '').replace(' ', '')} absolute top-2 right-2">${product.badge}</span>` : ''}
                     </div>
@@ -1569,6 +1472,7 @@
                     }
                 });
             });
+
             images.forEach(img => imageObserver.observe(img));
         }
 
@@ -1579,7 +1483,10 @@
                     e.preventDefault();
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
-                        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
                         // Close mobile menu if open
                         mobileMenu.classList.add('hidden');
                     }
@@ -1589,7 +1496,7 @@
 
         // Search results functions
         function showSearchResults() {
-            const results = products.filter(product =>
+            const results = products.filter(product => 
                 product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                 product.description.toLowerCase().includes(searchTerm.toLowerCase())
             ).slice(0, 5);
@@ -1650,6 +1557,7 @@
         // Delivery app functions
         function openDeliveryApp(app) {
             const location = "https://www.google.com/maps/place/31%C2%B032'54.2%22N+74%C2%B022'38.5%22E/@31.5483934,74.3747862,707m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d31.5483889!4d74.3773611?hl=en&entry=ttu&g_ep=EgoyMDI1MDgyNS4wIKXMDSoASAFQAw%3D%3D";
+
             const appUrls = {
                 careem: `careem://location?lat=31.54839324951172&lng=74.37737274169922`,
                 uber: `uber://?action=setPickup&pickup[latitude]=31.54839324951172&pickup[longitude]=74.37737274169922`,
@@ -1660,6 +1568,7 @@
             // Try to open the app
             const appUrl = appUrls[app];
             const fallbackDelay = 2000;
+
             const iframe = document.createElement('iframe');
             iframe.style.display = 'none';
             iframe.src = appUrl;
